@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="viggo" />
+  <title>一个导航 - OneNav</title>
+  <meta name="keywords" content="网址导航">
+  <meta name="description" content="OneNav">
+  <link rel="shortcut icon" href="/favicon.ico">
+  
+<link rel="stylesheet" href="/css/style.min.css">
+<link rel="stylesheet" href="/css/dark.min.css">
+<link rel="stylesheet" href="/css/animation.min.css">
+<link rel="stylesheet" href="/css/mobile.min.css">
+<link rel="stylesheet" href="/css/loading.min.css">
+<link rel="stylesheet" href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  
+<script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+    var userDefinedSearchData = {};
+    var expandAll = false;
+  </script>
+  
+<script src="/js/header.min.js"></script>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+        
+<script src="/js/html5shiv.min.js"></script>
+
+        
+<script src="/js/respond.min.js"></script>
+
+    <![endif]-->
+  <!-- / FB Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://web.imsyy.top/submit/index.html">
+  <meta property="og:title" content="一个导航 - OneNav - OneNav">
+  <meta property="og:description" content="OneNav">
+  <meta property="og:site_name" content="一个导航 - OneNav - OneNav">
+  
+  <meta property="og:image" content="/images/webstack_banner_cn.png">
+  
+  <!-- / Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="一个导航 - OneNav - OneNav">
+  <meta name="twitter:description" content="OneNav">
+  
+  <meta name="twitter:image" content="/images/webstack_banner_cn.png">
+  
+  
+  <!-- 直接添加html内容即可 -->
+<!-- 可设置多行 -->
+<!-- Izitoast -->
+<link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/izitoast/1.4.0/css/iziToast.min.css">
+<script type="text/javascript"
+    src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/izitoast/1.4.0/js/iziToast.min.js">
+</script>
+  
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+</head>
+
+
+
+
+
+
+<body class="page-body">
+  <!--加载动画-->
+  <div id="loading-box">
+    <div class="spinner-box">
+      <span class="loader"></span>
+      <div class="loading-word">
+        <p class="loading-title">OneNav</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-container">
+    <div class="sidebar-menu toggle-others fixed">
+  <div class="sidebar-menu-inner">
+    <header class="logo-env">
+      <div class="logo">
+        <a href="/"><i class="fa-solid fa-compass"></i></a>
+        <div class="logo-text">
+          <a href="/">OneNav</a>
+        </div>
+      </div>
+      <div class="mobile-menu-toggle visible-xs">
+        <a onclick="switchNightMode()">
+          <i class="fa-solid fa-circle-half-stroke"></i>
+        </a>
+        <a href="" data-toggle="mobile-menu">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+      </div>
+    </header>
+    <ul id="main-menu" class="main-menu">
+      
+      <li class="">
+        
+          <a href="/#常用网站" class="smooth">
+            
+            <i class="fa-solid fa-star"></i>
+            <span class="title">常用网站</span>
+          </a>
+      </li>
+      
+      <li class="">
+        
+          <a href="/#常用工具" class="smooth">
+            
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <span class="title">常用工具</span>
+          </a>
+      </li>
+      
+      <li class="">
+        
+          <a href="/#前端框架" class="smooth">
+            
+            <i class="fa-solid fa-laptop"></i>
+            <span class="title">前端框架</span>
+          </a>
+      </li>
+      
+      <hr style="margin-bottom: 32px; border-top: none;" />
+      
+      <li class="submit-tag active">
+        <a href="/submit/">
+          <i class="fa-solid fa-award"></i>
+          <span class="tooltip-blue">网站收录</span>
+        </a>
+      </li>
+      <li class="submit-tag">
+        <a href="/about/">
+          <i class="fa-solid fa-circle-info"></i>
+          <span class="tooltip-blue">关于本站</span>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    <div class="main-content">
+      <nav class="navbar user-info-navbar" id="navbar" role="navigation">
+        <ul class="user-info-menu left-links list-inline list-unstyled">
+          <li class="menu-item">
+            <a href="https://www.imsyy.top" target="_black">
+              <i class="fa-solid fa-house"></i>
+              <span>主站</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="https://blog.imsyy.top" target="_black">
+              <i class="fa-solid fa-blog"></i>
+              <span>博客</span>
+            </a>
+          </li>
+          <li class="menu-item" style="margin-left:auto;margin-right: 10px;">
+            <i class="fa-solid fa-message" style="margin-right:6px"></i>
+            <span id="jinrishici-sentence">正在加载今日诗词....</span>
+            <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+          </li>
+        </ul>
+      </nav>
+      <!-- 主体内容 -->
+      <div class="panel-body">
+        <h4><i class="fa-solid fa-angle-right"></i>网站收录</h4>
+        <p>
+          <i class="fa-solid fa-circle-exclamation"></i>不收录有反动、色情、赌博等不良内容或提供不良内容链接的网站，以及网站名称或内容违反国家有关法规的网站<br>
+          <i class="fa-solid fa-circle-exclamation"></i>不收录含有病毒、木马，弹出插件或恶意更改他人电脑设置的网站及有多个弹窗广告的网站<br>
+          <i class="fa-solid fa-circle-exclamation"></i>不收录在正常情况下无法正常连接或浏览的网站<br>
+          <i class="fa-solid fa-circle-exclamation"></i>本站保留收录决定权以及在本站网址数据库中相关内容的编辑决定权<br>
+          <i class="fa-solid fa-circle-exclamation"></i>本站会定期检查所有网站，如发现收录的网站违背我们的收录标准，将删除链接
+        </p>
+        <hr>
+        <div id="tcomment"></div>
+        <script src="https://cdn.staticfile.org/twikoo/1.5.10/twikoo.all.min.js"></script>
+        <script>
+          twikoo.init({
+            envId: 'twikoo-9g35ri44f12bc7f2', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
+            el: '#tcomment', // 容器元素
+            // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
+            // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+            // lang: 'zh-CN', // 用于手动设定评论区语言，支持的语言列表 https://github.com/imaegoo/twikoo/blob/main/src/js/utils/i18n/index.js
+          })
+        </script>
+      </div>
+      <!-- 悬浮窗 -->
+      <div class="wapnone fk_service">
+        <ul>
+          <li class="fk_service_box fk_service_ax" onclick="switchNightMode()">
+            <div class="fk_service_ax_cont" id="fk-span">
+              <span class="fk_service_triangle" id="fk-span-right"></span>
+              <span id="fk_service_text">切换夜间模式</span></div>
+          </li>
+          <li class="fk_service_box fk_service_home" onclick="window.location=('/')">
+            <div class="fk_service_home_cont" id="fk-span">
+              <span class="fk_service_triangle" id="fk-span-right"></span>回到首页</div>
+          </li>
+          <li class="fk_service_box fk_service_jk">
+            <a data-toggle="sidebar">
+              <div class="fk_service_jk_cont" id="fk-span">
+                <span class="fk_service_triangle" id="fk-span-right"></span>切换侧边栏</div>
+            </a>
+          </li>
+          <a rel="go-top">
+            <li class="fk_service_box fk_service_upward" id="topup" style="display: none;">
+              <div class="fk_service_upward_cont" id="fk-span"> <span class="fk_service_triangle"
+                  id="fk-span-right"></span> <span>返回顶部</span>
+              </div>
+            </li>
+          </a>
+        </ul>
+      </div>
+      <!-- 悬浮窗 end -->
+      <script>
+        (function () {
+          if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
+            if (new Date().getHours() > 22 || new Date().getHours() < 6) {
+              document.body.classList.add('night');
+              document.cookie = "night=1;path=/";
+            } else {
+              document.body.classList.remove('night');
+              document.cookie = "night=0;path=/";
+            }
+          } else {
+            var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
+            if (night == '0') {
+              document.body.classList.remove('night');
+            } else if (night == '1') {
+              document.body.classList.add('night');
+            }
+          }
+        })();
+      </script>
+      <script>
+        document.title = '网站收录 - OneNav';
+      </script>
+
+
+<footer class="main-footer sticky footer-type-1">
+  <div class="footer-inner">
+    <!-- Add your copyright text here -->
+    <p>
+      
+      &copy; 2020 - 2022
+      <a href="https://www.imsyy.top" target="_blank"><strong>無名</strong></a> | Design by <a href="http://viggoz.com" target="_blank"><strong>Viggo</strong></a> | Power by <a href="https://hexo.io/" target="_blank"><strong>Hexo</strong></a> & <a href="https://github.com/HCLonely/hexo-theme-webstack/" target="_blank"><strong>hexo-theme-webstack</strong></a>
+    </p>
+    <!-- <div class="go-up">
+      <a href="#" rel="go-top">
+        <i class="fas fa-angle-up"></i>
+      </a>
+    </div> -->
+  </div>
+</footer>
+</div>
+</div>
+
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/TweenLite.min.js"></script>
+<script src="/js/resizeable.min.js"></script>
+<script src="/js/joinable.js"></script>
+<script src="/js/xenon-api.min.js"></script>
+<script src="/js/xenon-toggles.min.js"></script>
+<script src="/js/xenon-custom.min.js"></script>
+
+
+
+<script src="/js/lozad.min.js"></script>
+
+
+
+
+<!-- 直接添加html内容即可 -->
+<!-- 可设置多行 -->
+
+</body>
+
+</html>
