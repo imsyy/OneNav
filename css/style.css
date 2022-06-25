@@ -551,7 +551,8 @@ body {
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical
+    -webkit-box-orient: vertical;
+    margin-right: 4px;
 }
 
 .overflowClip_2 {
