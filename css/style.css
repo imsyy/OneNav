@@ -32,6 +32,7 @@ body {
     background-image: url(https://img.imsyy.top/bg/light/leaves-pattern.png);
     background-attachment: fixed;
     transition: 0.3s;
+    font-family: 'HarmonyOS_Regular', sans-serif !important;
 }
 
 .col-sm-3 {
